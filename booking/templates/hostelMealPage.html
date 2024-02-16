@@ -1,0 +1,111 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            line-height: 1.5;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card-wrapper {
+            max-width: 1000px;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .product-imgs {
+            position: relative;
+        }
+
+        .img-display {
+            overflow: hidden;
+        }
+
+        .img-showcase {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .img-showcase img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            text-transform: capitalize;
+            font-weight: 700;
+            color: #12263a;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .btn-go-back {
+            background-color: #256eff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .btn-go-back:hover {
+            background-color: #1c4fc8;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-wrapper">
+        <div class="card">
+            <!-- card left -->
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        {% if hostel %}
+                            <img src="/static/meals/{{ hostel.mealFilePath }}" alt="Hostel Meal Image">
+                        {% else %}
+                            <img src="/static/meals/no_meal_present.png" alt="Hostel Meal Image">
+                        {% endif  %}
+                    </div>
+                </div>
+            </div>
+            <!-- card right -->
+        </div>
+        <h2 class="product-title">Hostel Meal</h2>
+        <button type="button" class="btn-go-back" onclick="goBack()">Go Back</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

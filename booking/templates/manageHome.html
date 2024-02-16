@@ -1,0 +1,287 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard | Queries</title>
+    <link href="{% static 'assets/vendor/fontawesome/css/fontawesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/fontawesome/css/solid.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/fontawesome/css/brands.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/master.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/flagiconcss/css/flag-icon.min.css' %}" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        
+        <!-- sidebar navigation component -->
+         <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <img src="\static\img\logo-img.jpg"
+  alt="Logo"
+  style="width: 110px; height: 48px;" alt="bootraper logo" class="app-logo my-0">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                  <a href="{% url 'hDashboard' %}"><i class="fas fa-home"></i> Dashboard</a>
+
+                </li>
+                <li>
+                  <a href="{% url 'manageEmployee' %}"><i class="fas fa-file-alt"></i> Add Employee</a>
+
+                </li>
+                <li>
+                    <a href="{% url 'hostelBookDetails' %}"><i class="fas fa-file-alt"></i> Manage Booking</a>
+  
+                  </li>
+                <li>
+                    <a href="{% url 'manageStudent' %}"><i class="fas fa-file-alt"></i> Add Student</a>
+                </li>
+                <li>
+                    <a href="{% url 'addHostel' %}"><i class="fas fa-file-alt"></i> Manage Hostels</a>
+                </li>
+                <li>
+                    <a href="{% url 'addHostelMeal' %}"><i class="fas fa-file-alt"></i> Manage Hostel Meal</a>
+                </li>
+                <!-- <li>
+                    <a href="{% url 'takeAttendance' %}"><i class="fas fa-table"></i> Manage Attendance</a>
+                </li> -->
+                 <li>
+                    <a href="{% url 'manageNoticeBoard' %}"><i class="fas fa-table"></i> Manage Notice Board</a>
+                </li>
+                <li>
+                    <a href="{% url 'manegHomePage' %}"><i class="fas fa-table"></i> Manage Home Content</a>
+                </li>
+                <!-- <li>
+                    <a href="charts.html"><i class="fas fa-chart-bar"></i> Charts</a>
+                </li>
+                <li>
+                    <a href="icons.html"><i class="fas fa-icons"></i> Icons</a>
+                </li>
+                <li>
+                    <a href="#uielementsmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-layer-group"></i> UI Elements</a>
+                    <ul class="collapse list-unstyled" id="uielementsmenu">
+                        <li>
+                            <a href="ui-buttons.html"><i class="fas fa-angle-right"></i> Buttons</a>
+                        </li>
+                        <li>
+                            <a href="ui-badges.html"><i class="fas fa-angle-right"></i> Badges</a>
+                        </li>
+                        <li>
+                            <a href="ui-cards.html"><i class="fas fa-angle-right"></i> Cards</a>
+                        </li>
+                        <li>
+                            <a href="ui-alerts.html"><i class="fas fa-angle-right"></i> Alerts</a>
+                        </li>
+                        <li>
+                            <a href="ui-tabs.html"><i class="fas fa-angle-right"></i> Tabs</a>
+                        </li>
+                        <li>
+                            <a href="ui-date-time-picker.html"><i class="fas fa-angle-right"></i> Date & Time Picker</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#authmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-user-shield"></i> Authentication</a>
+                    <ul class="collapse list-unstyled" id="authmenu">
+                        <li>
+                            <a href="login.html"><i class="fas fa-lock"></i> Login</a>
+                        </li>
+                        <li>
+                            <a href="signup.html"><i class="fas fa-user-plus"></i> Signup</a>
+                        </li>
+                        <li>
+                            <a href="forgot-password.html"><i class="fas fa-user-lock"></i> Forgot password</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pagesmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-copy"></i> Pages</a>
+                    <ul class="collapse list-unstyled" id="pagesmenu">
+                        <li>
+                            <a href="blank.html"><i class="fas fa-file"></i> Blank page</a>
+                        </li>
+                        <li>
+                            <a href="404.html"><i class="fas fa-info-circle"></i> 404 Error page</a>
+                        </li>
+                        <li>
+                            <a href="500.html"><i class="fas fa-info-circle"></i> 500 Error page</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="users.html"><i class="fas fa-user-friends"></i>Users</a>
+                </li>
+                <li>
+                    <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+                </li> -->
+            </ul>
+        </nav>
+        <!-- end of sidebar component -->
+        <div id="body" class="active">
+            <!-- navbar navigation component -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-bars"></i><span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ms-auto">
+                       
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user"></i> <span> {{ request.session.user_name }} </span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                                    <ul class="nav-list">
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="{% url 'logout' %}" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
+            <div class="content">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>Manage User Messages </h3>
+                    </div>
+                    <div class="row">   
+                        
+
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-header">User Message Forms</div>
+                                <!-- Button trigger modal -->
+                                
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <table class="table table-hover" id="dataTables-example" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Username</th>
+                                                <th>Subject</th>
+                                                <th>Email</th>
+                                                <th>Actions</th>
+                                                <th>Reply</th> <!-- New column for reply button -->
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for message in contactforums %}
+                                            <tr>
+                                                <td>{{ message.id }}</td>
+                                                <td>{{ message.name }}</td>
+                                                <td>{{ message.subject }}</td>
+                                                <td>{{ message.email }}</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary view-message-btn" data-toggle="modal" data-target="#messageModal" data-message="{{ message.message }}">View Message</button>
+                                                </td>
+                                                <!-- Conditionally show reply button -->
+                                                <td>
+                                                    {% if message.admin_message != 'NA' %}
+                                                        <!-- Display reply message -->
+                                                        <p>{{ message.admin_message }}</p>
+                                                    {% else %}
+                                                        <!-- Display reply button -->
+                                                        <button type="button" class="btn btn-success reply-btn" data-toggle="modal" data-target="#replyModal{{ message.id }}">Reply</button>
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                            <!-- Reply modal for each message -->
+                                            <div class="modal fade" id="replyModal{{ message.id }}" tabindex="-1" role="dialog" aria-labelledby="replyModalLabel{{ message.id }}" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="replyModalLabel{{ message.id }}">Reply to {{ message.name }}</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <!-- Your reply form goes here -->
+                                                            <form method="post" action="{% url 'replyMessage' %}">
+                                                                {% csrf_token %}
+                                                                <div class="form-group">
+                                                                    <label for="reply">Your Reply:</label>
+                                                                    <textarea class="form-control" id="reply" name="reply" rows="4" required></textarea>
+                                                                    <input type="hidden" name="message_id" value="{{ message.id }}">
+                                                                </div>
+                                                                <button type="submit" class="btn btn-primary">Send Reply</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                
+                                <!-- Modal -->
+                                
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>
+                    <!-- Modal -->
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="messageModalLabel">User Message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="messageBody"></p>
+        <!-- Message content will be dynamically populated here -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/chartsjs/Chart.min.js' %}"></script>
+    <script src="{% static 'assets/js/dashboard-charts.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+<script>
+    $(document).ready(function() {
+        $('.view-message-btn').click(function() {
+            var message = $(this).data('message');
+            $('#messageBody').text(message);
+        });
+    });
+</script>
+
+</html>

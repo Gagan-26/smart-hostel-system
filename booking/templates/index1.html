@@ -1,0 +1,627 @@
+{% load static %}
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <style>
+    /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+body {
+  line-height: 1
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+
+/* MAIN STRUCTURE */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  min-width: 975px;
+}
+
+header {
+  padding-bottom: 40px;
+}
+
+main {
+  position: relative;
+  display: block;
+}
+
+footer {
+  margin-top: 0 auto 30px;
+  border-top: 0;
+  text-align: left;
+  padding: 50px 0 50px 40px;
+  color: #99979c;
+  background-color: #2A2730;
+  display: block;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* BOOTSTRAP 4 ANNOUNCEMENT */
+
+div.b4_teaser {
+  position: relative;
+  text-align: center;
+  background-color: #0275D8;
+}
+
+div.b4_teaser a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+div.b4_teaser a:hover {
+  background-color: #0269C2;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+  position: relative;
+  display: block;
+  padding: 0 25px;
+  width: 100%;
+}
+
+.navbar li {
+  line-height: 40px;
+  height: 40px;
+}
+
+.navbar li a {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #563D7C;
+  padding: 0 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar li a.navbar_brand {
+  font-size: 18px;
+}
+
+.navbar li a:hover {
+  background-color: #EEEEEE;
+}
+
+.left_nav {
+  float: left;
+  position: relative;
+  left: 20px;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.left_nav li {
+  float: left;
+}
+
+.right_nav {
+  float: right;
+  position: relative;
+  right: 60px;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.right_nav li {
+  float: left;
+}
+
+
+/* BOOTSTRAP DOWNLOAD */
+
+section#bootstrap_download {
+  position: relative;
+  padding: 80px 0;
+  background-color: #0A2647;
+}
+
+article.bs_header {
+  padding: 15px;
+  margin: 35px;
+  text-align: center;
+}
+
+span.logo {
+  margin: 0 auto 30px;
+  width: 144px;
+  height: 144px;
+  border: 1px solid;
+  text-align: center;
+  font-size: 108px;
+  line-height: 140px;
+  display: block;
+  font-weight: 600;
+  border-radius: 15%;
+  color: white;
+}
+
+.bs_description {
+  font-size: 24px;
+  color: white;
+  margin: 0 auto 30px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.bs_button {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  border: 1px solid;
+  padding: 15px 30px;
+  border-radius: 6px;
+  margin: 0 auto 30px;
+  vertical-align: middle;
+  width: auto;
+}
+
+.bs_button:hover {
+  background-color: white;
+  color: #563D7C;
+}
+
+p.version {
+  margin: -15px 0 30px 0;
+  color: #9783B9;
+  font-size: 14px;
+}
+
+
+/*BOOTSTRAP FEATURES*/
+
+#bootstrap_features {
+  padding: 15px 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+  text-align: center;
+}
+
+.section_h2 {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.section_p {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #555;
+}
+
+#features_articles {
+  position: relative;
+  display: block;
+}
+
+#features_articles > article {
+  display: inline-block;
+  width: 32%;
+  height: auto;
+}
+
+#features_articles > article > img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#features_articles > article > h3 {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+
+.lead {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.bs_button_inverse {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #563D7C;
+  border: 1px solid;
+  padding: 15px 30px;
+  border-radius: 6px;
+  margin: 0 auto 30px;
+  vertical-align: middle;
+  width: auto;
+}
+
+.bs_button_inverse:hover {
+  background-color: #563D7C;
+  color: white;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #EEEEEE;
+}
+
+.half_rule {
+  width: 100px;
+  margin: 40px auto;
+}
+
+
+/* BOOTSTRAP EXPO */
+
+#bootstrap_expo {
+  padding: 29.5px 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+  text-align: center;
+}
+
+#expo_images {
+  display: block;
+  position: relative;
+}
+
+.expo_thumb {
+  width: 24%;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+
+/* FOOTER */
+
+.footer_link {
+  color: white;
+}
+
+.footer_nav {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer_nav li {
+  display: inline-block;
+  padding-right: 20px;
+  font-weight: 500;
+}
+
+footer > p {
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.card {
+  border: none;
+  border-radius: 0;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+}
+.carousel-inner {
+  padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-control-prev span,
+.carousel-control-next span {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+@media screen and (min-width: 577px) {
+  .cards-wrapper {
+    display: flex;
+  }
+  .card {
+    margin: 0 0.5em;
+    width: calc(100% / 2);
+  }
+  .image-wrapper {
+    height: 20vw;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .card:not(:first-child) {
+    display: none;
+  }
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- <div class="b4_teaser">
+      <a href="#">Aww yeah, Bootstrap 4 is coming!</a>
+    </div> -->
+    <nav class="navbar">
+      <ul class="left_nav">
+        <li>
+          <a class="navbar_brand" href="#">Smart Hostel Point</a>
+        </li>
+        <li>
+          <a href="#">Getting Started</a>
+        </li>
+        <li>
+          <a href="{% url 'aboutus' %}">About us</a>
+        </li>
+        <li>
+          <a href="{% url 'aboutus' %}">Contact</a>
+        </li>
+      
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        
+      </ul>
+      <ul class="right_nav">
+      
+        <li>
+          <a href="{% url 'signup' %}">Signup</a>
+        </li>
+        <li>
+          <a href="{% url 'login' %}">login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="bootstrap_download">
+      <article class="bs_header">
+        <img class="logo" src="https://c8.alamy.com/comp/2E2PMR1/vector-logo-of-a-hostel-hotel-2E2PMR1.jpg" style="height: 100px; width: 100px"></img>
+        <p class="bs_description">We list out most unique and affordable Hostels</p>
+        <a class="bs_button" href="{% url 'signup' %}">Sign up</a>
+      </article>
+    </section>
+    <div class="container-fluid my-5">
+         <div id="carouselExampleControls" class="carousel slide my-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <div class="cards-wrapper">
+                <div class="card">
+                <div class="image-wrapper">
+                    <img src="https://media.istockphoto.com/id/182498079/photo/youth-hostel-dorm-room.jpg?s=612x612&w=0&k=20&c=HDbm6aOu-IxfLkU47lEQ9aBkDBGijPjtzokB74J5AMw=" alt="...">
+                </div>
+                
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/310271999.jpg?k=ffb1f6f7d81b84021479cb005f443545ce402d8b6b4e9962187fa9e609fb4753&o=&hp=1" alt="...">
+                </div>
+                
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                    <img src="https://www.shutterstock.com/image-photo/kievukraineaugust-26-2010-university-students-600nw-2338960673.jpg" alt="...">
+                </div>
+                
+                </div>
+            </div>
+        </div>
+        
+    </div>
+ 
+</div>
+    </div>
+    <div class="container-fluid">
+    <section id="bootstrap_expo">
+        <section class="section_header">
+            <h2 class="section_h2">Notice Board</h2>
+            <p class="section_p">Millions of amazing sites across the web are being built with Bootstrap. Get started on your own with our growing <a href="#">collection of examples</a> or by exploring some of our favorites.</p>
+        </section>
+    </div>
+    
+
+    <hr>
+
+    
+  </main>
+
+  
+  
+
+   
+
+
+  <footer>
+    <section class="footer_nav">
+      <ul>
+        <li>
+          <a class="footer_link" href="#">GitHub</a>
+        </li>
+        <li>
+          <a class="footer_link" href="#">Twitter</a>
+        </li>
+        <li>
+          <a class="footer_link" href="#">Examples</a>
+        </li>
+        <li>
+          <a class="footer_link" href="#">About</a>
+        </li>
+      </ul>
+    </section>
+   
+  </footer>
+
+</body>
+
+</html>
+
+    
+    

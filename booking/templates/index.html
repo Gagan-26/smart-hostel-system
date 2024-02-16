@@ -1,0 +1,542 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Smart Hostel Point</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Smart Hostel Point
+  * Updated: Jan 09 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/Smart Hostel Point-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">admin@smarthostel.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 9682 660 048</span></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><img src="\static\img\logo-img.jpg" alt="Smart Hostel Point Logo" style="max-height: 85px;"></h1>
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt=""></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+          
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'signup' %}">Signup</a></li>
+
+          <li><a class="nav-link scrollto" href="{% url 'login' %}">Login</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Welcome to <span>Smart Hostel Point</span></h1>
+      <h2>We listed amazing Hostels accross the Globe</h2>
+      <div class="d-flex">
+        <a href="{% url 'signup' %}" class="btn-get-started scrollto">Get Started</a>
+        <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Efficient and User-Friendly Management System</a></h4>
+              <p class="description">Experience a hassle-free hostel life with our efficient management system</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Secure and Comfortable Living Spaces</a></h4>
+              <p class="description">Our hostel prioritizes the safety and comfort of residents</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Transparent Admissions Process</a></h4>
+              <p class="description">We believe in transparency and simplicity. Our admissions process is straightforward, providing clear guidelines and timelines</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Diverse Amenities and Recreational Facilities</a></h4>
+              <p class="description">Beyond just accommodation, our hostel offers a vibrant community with a range of amenities and recreational facilities</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <!-- <img src="https://t4.ftcdn.net/jpg/02/19/66/93/360_F_219669327_v12pBKc7TB62E3uCJrgRRkDhfVENK3z5.jpg"/> -->
+          <h3>Find Out More <span>About Us</span></h3>
+          <p>Smart Hostel Point</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="https://t4.ftcdn.net/jpg/02/19/66/93/360_F_219669327_v12pBKc7TB62E3uCJrgRRkDhfVENK3z5.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <!-- <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3> -->
+            <p class="fst-italic">
+              At Smart Hostel, we bring you a cutting-edge hostel management platform designed to streamline the booking process, manage meals efficiently, and simplify attendance tracking for administrators. Whether you're a hostel owner looking to list your property or a student searching for the perfect accommodation, our system has you covered.
+            </p>
+            <!-- <ul>
+              <li>
+                <i class="bx bx-store-alt"></i>
+                <div>
+                  <h5>Ullamco laboris nisi ut aliquip consequat</h5>
+                  <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+                </div>
+              </li>
+              <li>
+                <i class="bx bx-images"></i>
+                <div>
+                  <h5>Magnam soluta odio exercitationem reprehenderi</h5>
+                  <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+                </div>
+              </li>
+            </ul> -->
+            <p>
+              User-Friendly Interface: Our intuitive platform allows users to easily browse and find hostels that match their preferences.
+              Online Booking: Seamlessly reserve hostel rooms with just a few clicks, eliminating the need for complex paperwork.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <h3>Check our <span>Services</span></h3>
+          <p>Welcome to Smart Hostel System - Your Ultimate Hostel Management Solution!</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">User-Friendly Interface</a></h4>
+              <p>Our intuitive platform allows users to easily browse and find hostels that match their preferences</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">Online Booking</a></h4>
+              <p>Seamlessly reserve hostel rooms with just a few clicks, eliminating the need for complex paperwork</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">Secure Payments</a></h4>
+              <p>Enjoy hassle-free transactions with our secure online payment system, providing peace of mind for both students and hostel owners</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4><a href="">Real-Time Availability</a></h4>
+              <p>Hostel owners can update room availability in real-time, ensuring accurate and up-to-date information for potential residents</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-slideshow"></i></div>
+              <h4><a href="">Data Security</a></h4>
+              <p>We prioritize the security of your data, implementing robust measures to protect sensitive information.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-arch"></i></div>
+              <h4><a href="">Customizable Meal Plans</a></h4>
+              <p> Tailor meal plans to suit individual preferences, dietary restrictions, and cultural considerations</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Bachelor's Student</h4>
+                <h4>⭐⭐⭐⭐</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  I recently used the hostel management system to book my stay and explore meal options at the hostel, and I must say, it was an incredibly smooth experience.The booking process was straightforward and user-friendly. I could easily browse through available hostels, check their details, and make a reservation without any hassle. The system provided all the necessary information, including prices, available rooms, and amenities, making it easy to make an informed decision.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>College Student</h4>
+                <h4>⭐⭐⭐⭐⭐</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  The hostel details were comprehensive and helped me get a clear picture of what to expect. The descriptions, images, and additional information about facilities and services were all available at my fingertips. This made it easy to choose a hostel that suited my preferences and needs.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Master's Student</h4>
+                <h4>⭐⭐⭐⭐⭐</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  One standout feature was the ability to access detailed information about the meal options available at the hostel. The system provided a transparent overview of meal plans, prices, and menu options. This transparency was crucial in helping me plan my budget and make informed decisions regarding my meals during the stay.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>College Student</h4>
+                <h4>⭐⭐⭐⭐⭐</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  In case I had any questions or needed assistance, the customer support team was quick to respond and provided helpful guidance. Their responsiveness added to the overall positive experience and instilled confidence in the reliability of the system.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>F.A.Q</h2>
+          <h3>Frequently Asked <span>Questions</span></h3>
+          <p>Smart Hostel Point is an advanced hostel management system designed to simplify and enhance the hostel experience for both hostel owners and residents.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <ul class="faq-list">
+
+              <li>
+                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">How do I book a hostel through Smart Hostel Point? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Booking a hostel through Smart Hostel Point is easy. Simply create an account, browse available hostels, select your preferred accommodation, and proceed with the secure online booking process.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">What features does Smart Hostel Point offer for hostel owners? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Smart Hostel Point provides hostel owners with real-time room availability updates, secure payment processing, and a user-friendly interface for managing their hostel details. Hostel owners can efficiently handle reservations and update their hostel information.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Is my data secure on Smart Hostel Point? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Yes, we prioritize the security and privacy of your data. Smart Hostel Point implements robust encryption, secure authentication processes, and adheres to industry standards to ensure the protection of your information.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">How does the attendance tracking system work on Smart Hostel Point? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Smart Hostel Point integrates an automated attendance tracking system. Residents can check in and out seamlessly, and administrators receive real-time data to monitor attendance. This feature promotes safety and accountability within the hostel premises.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Can I list my hostel on Smart Hostel Point? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Absolutely! Hostel owners can easily list their properties on Smart Hostel Point. Visit the 'List Your Hostel' section, follow the simple steps, and showcase your hostel to a wider audience of potential residents.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">What sets Smart Hostel Point apart from other hostel management systems? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Smart Hostel Point stands out due to its commitment to technological innovation, user-centric design, and a comprehensive approach to hostel management. We prioritize excellence, efficiency, and the satisfaction of both hostel owners and residents.
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <h3><span>Contact Us</span></h3>
+          <p>Whether you have questions, feedback, or need support, our team is ready to help. Choose the method that suits you best:</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>B706, The Address Society, Wakad, Pune</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>admin@smarthostel.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+91 9682 660 048</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-6 ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.5614536251665!2d73.75443317503971!3d18.593799882513988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9064c0effe3%3A0xf71217b15feba08f!2sThe%20Address%20Society!5e0!3m2!1sen!2sin!4v1707707396084!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="{% url 'contactUsForm' %}" method="post" >
+              {% csrf_token %}
+              <div class="row">
+                <div class="col form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <!-- <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3><span>.</span></h3>
+            <p>
+              B706, The Address Society, <br>
+              Wakad, Pune<br>
+              India <br><br>
+              <strong>Phone:</strong> +91 9682 660 048<br>
+              <strong>Email:</strong> admin@smarthostel.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Smart Hostel Point</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- <div id="preloader"></div> -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+    <!-- Scripts -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+</body>
+
+</html>

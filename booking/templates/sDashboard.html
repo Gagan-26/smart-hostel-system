@@ -1,0 +1,245 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard | Hostel Booking</title>
+    <link href="{% static 'assets/vendor/fontawesome/css/fontawesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/fontawesome/css/solid.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/fontawesome/css/brands.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/master.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/flagiconcss/css/flag-icon.min.css' %}" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .wrapper {
+            display: flex;
+            height: 100vh;
+        }
+
+        #sidebar {
+            background: #343a40;
+            color: #adb5bd;
+            transition: all 0.3s;
+        }
+
+        #sidebar.active {
+            margin-left: -250px;
+        }
+
+        #sidebar .sidebar-header img {
+            width: 120px;
+            height: auto;
+            margin: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+        #sidebar ul li {
+            font-size: 14px;
+        }
+
+        #sidebar ul li a {
+            padding: 10px 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #adb5bd;
+        }
+
+        #sidebar ul li a:hover {
+            color: #fff;
+            background: #343a40;
+        }
+
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            color: #343a40;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .navbar-light .navbar-toggler {
+            border-color: #343a40;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            background-color: #343a40;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .page-pretitle {
+            color: #868e96;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .page-title {
+            color: #343a40;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+            color: #856404;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        .btn-warning:hover {
+            background-color: #ffca2c;
+        }
+
+        .navbar-nav .nav-item.dropdown:hover .nav-link {
+            color: #ffc107;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <img src="\static\img\logo-img.jpg"
+                    alt="Logo" style="width: 110px; height: 48px;" class="app-logo my-0">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="{% url 'sDashboard' %}"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="{% url 'showMeal' %}"><i class="fas fa-utensils"></i> Show Meal</a>
+                </li>
+                <li>
+                    <a href="{% url 'sHistory' %}"><i class="fas fa-history"></i> History</a>
+                </li>
+                <li>
+                    <a href="{% url 'sNoticeBoard' %}"><i class="fas fa-file-alt"></i> Notice Board</a>
+                </li>
+                <li>
+                    <a href="{% url 'sEditProfile' %}"><i class="fas fa-user-edit"></i> Edit Profile</a>
+                </li>
+                <li>
+                    <a href="{% url 'userQueryDetails' %}"><i class="fas fa-home"></i> Queries</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-bars"></i><span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="#" id="nav2"
+                                    class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fas fa-user"></i> <span>{{ request.session.user_name }}</span> <i
+                                        style="font-size: .8em;" class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="{% url 'logout' %}" class="dropdown-item"><i
+                                                    class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        {% if warning_message %}
+                        <div class="alert alert-warning" role="alert">
+                            {{ warning_message }}
+                        </div>
+                        {% endif %}
+                        <div class="col-md-12 page-header">
+                            <div class="page-pretitle">Hostel of your Choice</div>
+                            <h2 class="page-title">All Hostels available</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% for hostel in all_hostels %}
+                        <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                            <div class="card">
+                                <img src="https://assets-global.website-files.com/5d51bb7d8483edf0d0390257/5e90283ebc1f1264ea7dbf42_festival_resized.jpg"
+                                    class="card-img-top" alt="{{ hostel.name }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ hostel.name }}</h5>
+                                    <p class="card-text">{{ hostel.description }}</p>
+                                    <a href="{% url 'hostelDesc' id=hostel.id %}" class="btn btn-warning">Book
+                                        Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                    </div>
+                    <div class="row">
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/chartsjs/Chart.min.js' %}"></script>
+    <script src="{% static 'assets/js/dashboard-charts.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+
+</html>
